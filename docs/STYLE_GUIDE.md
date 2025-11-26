@@ -1,3 +1,4 @@
+{% raw %}
 # Style Guide
 
 Keep future changes consistent with the current codebase.
@@ -47,3 +48,4 @@ Keep future changes consistent with the current codebase.
 - Maintain heading hierarchy (one `<h1>` in hero, `<h2>` for section titles, `<h3>` for card titles).
 - Keep link/button text descriptive; avoid empty `href`/`button` elements.
 - Preserve focusable elements for modals and form controls; if adding modals, reuse the `.modal` structure in `templates/index.html`.
+{% endraw %}

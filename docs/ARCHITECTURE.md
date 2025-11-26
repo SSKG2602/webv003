@@ -1,3 +1,4 @@
+{% raw %}
 # Architecture
 
 ## High-level flow
@@ -38,3 +39,4 @@
 ## Configuration
 - `.env` (copy from `.env.example`) provides `MONGO_URI` (required), `DB_NAME`, SMTP settings, and display emails.
 - `config.py` reads env vars and makes them available to routes and services.
+{% endraw %}

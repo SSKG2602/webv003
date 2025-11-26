@@ -1,3 +1,4 @@
+{% raw %}
 # Editing Guide
 
 Use this guide to change text and content without touching backend logic.
@@ -82,3 +83,4 @@ Use this guide to change text and content without touching backend logic.
 - Do not rename section IDs used by navbar links.
 - Keep the JSON structures in JS fetch calls unchanged (API expects specific fields).
 - After edits, skim the page to ensure grids still align (manifesto/values grids are responsive).
+{% endraw %}

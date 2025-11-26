@@ -1,3 +1,4 @@
+{% raw %}
 # File Map
 
 Use this as a path-by-path guide to find or edit content.
@@ -47,3 +48,4 @@ Use this as a path-by-path guide to find or edit content.
 - `docs/STYLE_GUIDE.md` — Naming and styling conventions.
 - `docs/STYLE_SYSTEM.md` — Theme variables, card system, spacing, and hierarchy.
 - `docs/THEME_GUIDE.md` — How the light/dark themes work and where to change colors.
+{% endraw %}
