@@ -47,12 +47,12 @@ Full per-file descriptions live in `docs/FILE_MAP.md`.
 - HTML/Jinja: `templates/index.html` (single-page site) extending `templates/base.html`.
 - Backend logic: `src/routes/public.py` (pages) and `src/routes/api.py` (APIs).
 - MongoDB config: `config.py` and connection helpers in `src/db/client.py`.
-- Content edits: mostly inside `templates/index.html` (hero text, manifesto tiles, values, systems, services, projects, profiles, contact form labels). See `docs/EDITING_GUIDE.md` for exact locations.
+- Content edits: mostly inside `templates/index.html` (hero text, manifesto tiles, values, systems, services, profiles, contact form labels). See `docs/EDITING_GUIDE.md` for exact locations.
 - Theme: CSS variables in `static/css/main.css` and toggle logic in `static/js/main.js` (navbar button). Default is dark; user choice (light/dark) is saved to `localStorage`.
 
 ## Quick editing tips (no code changes)
 - Hero text: edit the `<h1>` and `<p>` tags in `templates/index.html` under the `hero` section.
 - Manifesto cards: edit the `manifesto_pillars` list inside `templates/index.html`.
 - Values tiles: edit the `values_pillars` list inside `templates/index.html`.
-- Systems/Services/Projects: edit the inline lists in their respective sections in `templates/index.html`.
+- Systems/Services: edit the inline content in their respective sections in `templates/index.html`.
 - Colors/fonts: adjust CSS tokens at the top of `static/css/main.css`.

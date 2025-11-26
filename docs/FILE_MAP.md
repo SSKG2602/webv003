@@ -17,7 +17,7 @@ Use this as a path-by-path guide to find or edit content.
   - Hero section (headline, subtext, buttons).
   - Values (“What We Stand For”) section with 5 tiles (`values_pillars` list).
   - Manifesto (“Our Manifesto / The Dasein Principles”) with 8 cards (`manifesto_pillars` list).
-  - Systems, Services, Projects sections (cards defined inline in lists).
+  - Systems and Services sections (cards defined inline).
   - About section (founder/co-founder bios, modals).
   - Contact section (email chips + contact form).
   - Footer (waitlist form).

@@ -25,7 +25,7 @@
 - Style system docs: `docs/STYLE_SYSTEM.md` for variables/cards/spacing; `docs/THEME_GUIDE.md` for theme controls.
 
 ## Section-to-template map
-- Hero, Values, Manifesto, Systems, Services, Projects, About, Contact, Footer: all live in `templates/index.html` as separate `<section>` blocks.
+- Hero, Values, Manifesto, Systems, Services, About, Contact, Footer: all live in `templates/index.html` as separate `<section>` blocks.
 - Navbar and global head: `templates/base.html`.
 - Form behaviors, scrolling, animations: `static/js/main.js`.
 - Styling tokens and layout rules: `static/css/main.css`.

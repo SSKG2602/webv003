@@ -29,12 +29,10 @@ Use this guide to change text and content without touching backend logic.
   - To add/remove a principle, adjust the list; numbering comes from the loop index.
   - Keep `manifesto-grid` container class for the two-column layout on desktop.
 
-## Systems / Services / Projects
+## Systems / Services
 - File: `templates/index.html`
-- Sections: `id="systems"`, `id="services"`, `id="projects"`
-- Each section has an inline list (`systems`, `services`, `projects`) right above the cards.
-  - Edit `title`, `status`, and `description` strings there.
-  - Add/remove items by editing these lists; the grids auto-flow.
+- Sections: `id="systems"`, `id="services"`
+- Each section has inline content right above the cards.
 
 ## About (founder/co-founder)
 - File: `templates/index.html`
