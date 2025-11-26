@@ -32,9 +32,9 @@ def build():
   env.globals["url_for"] = url_for
 
   contact_emails = {
-    "general": "general@dasein.works",
-    "founder": "founder@to-be-set",
-    "tech": "tech@to-be-set",
+    "general": "team@dasein.works",
+    "founder": "pamela@dasein.works",
+    "tech": "shreyas@dasein.works",
   }
   placeholder_flags = {key: "to-be-set" in value for key, value in contact_emails.items()}
 

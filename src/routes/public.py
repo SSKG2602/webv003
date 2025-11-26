@@ -6,7 +6,7 @@ public_bp = Blueprint("public", __name__)
 
 def _build_contact_emails():
   emails = {
-    "general": "general@dasein.works",
+    "general": "team@dasein.works",
     "founder": Config.FOUNDER_EMAIL,
     "tech": Config.TECH_EMAIL,
   }
