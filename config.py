@@ -26,7 +26,7 @@ class Config:
   SMTP_PORT: int = int(os.getenv("SMTP_PORT", "587"))
   SMTP_USER: str = os.getenv("SMTP_USER", "")
   SMTP_PASS: str = os.getenv("SMTP_PASS", "")
-  CONTACT_TO_EMAIL: str = os.getenv("CONTACT_TO_EMAIL", "team@dasein.works")
+  CONTACT_TO_EMAIL: str = os.getenv("CONTACT_TO_EMAIL", "general@dasein.works")
 
   FOUNDER_EMAIL: str = os.getenv("FOUNDER_EMAIL", "pamela@dasein.works")
   TECH_EMAIL: str = os.getenv("TECH_EMAIL", "shreyas@dasein.works")

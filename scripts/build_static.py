@@ -32,7 +32,7 @@ def build():
   env.globals["url_for"] = url_for
 
   contact_emails = {
-    "general": "team@dasein.works",
+    "general": "general@dasein.works",
     "founder": "pamela@dasein.works",
     "tech": "shreyas@dasein.works",
   }
