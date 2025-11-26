@@ -1,0 +1,448 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="hero" class="section hero-section page-section primary-section">
+  <div class="container">
+    <div class="hero-surface card card-primary hero-card">
+      <div class="hero-content">
+        <div class="hero-copy">
+          <h1 class="hero-title">AI built for people with clarity, dignity, and real-world responsibility at the center.</h1>
+          <div class="hero-subtitle text-muted">
+            <p>Intelligence that expands access, strengthens human agency, and supports communities overlooked by traditional systems.</p>
+            <p>Engineered on principles of fairness, transparency, safety, and accountable design visible in every interaction and outcome.</p>
+          </div>
+          <div class="button-row">
+            <button class="btn btn-primary" data-scroll-target="why">Read Our Commitment</button>
+            <button class="btn btn-outline" data-scroll-target="values">Our Principles</button>
+          </div>
+        </div>
+        <div class="hero-visual" id="dasein-intro-visual" role="img" aria-label="A continuous line with three points labeled context, structure, and outcome, representing AI systems that move from human context to accountable outcomes.">
+          <div class="continuum-panel">
+            <p class="continuum-label">Human-led continuum</p>
+            <div class="continuum-figure">
+              <svg class="continuum-line" viewBox="0 0 260 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 72 C88 72, 148 62, 224 44" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                <circle class="continuum-point" cx="52" cy="68" r="4" />
+                <circle class="continuum-point" cx="130" cy="60" r="4" />
+                <circle class="continuum-point" cx="208" cy="44" r="4" />
+              </svg>
+              <div class="continuum-point-labels" aria-hidden="true">
+                <span>Context</span>
+                <span>Structure</span>
+                <span>Outcome</span>
+              </div>
+            </div>
+            <p class="continuum-caption">Systems that move from real human context to accountable outcomes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="values" class="section values-section page-section primary-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow-label">Values</p>
+      <h2 class="section-title">What We Stand For</h2>
+      <p class="section-subtitle">Five anchors that define how we build and deploy intelligence.</p>
+    </div>
+    {% set values_pillars = [
+      {"title": "Systems Built for Human Life", "summary": "Intelligence must strengthen the conditions people actually live in. Our systems are shaped around the realities of human environments—messy, diverse, unequal, and full of real stakes.", "col": 2},
+      {"title": "People Set the Direction", "summary": "Human intent stays in command at every layer. Our tools expand reach, clarify decisions, and support agency without replacing or overriding it."},
+      {"title": "Life as a Connected Continuum", "summary": "Learning, health, work, care, and civic life are not separate domains. We design technology that moves with people across contexts, keeping coherence where other systems fragment."},
+      {"title": "Designed for Those at the Margins", "summary": "We start from the hardest environments—low access, low bandwidth, high friction. When intelligence works where constraints are greatest, it becomes equitable everywhere."},
+      {"title": "Clarity You Can See and Trust", "summary": "Every decision path must be observable, explainable, and testable. No hidden logic. No unexplained behavior. Just visible structure, stable outcomes, and systems that stay accountable."}
+    ] %}
+    <div class="card-grid values-grid">
+      {% for pillar in values_pillars %}
+        <article class="card card-primary value-card">
+          <h3>{{ pillar.title }}</h3>
+          <p class="text-muted">{{ pillar.summary }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="why" class="section page-section primary-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow-label">The Dasein Principles</p>
+      <h2 class="section-title">Our Manifesto</h2>
+      <p class="section-subtitle">Guiding standards for every system we design, build, and deploy.</p>
+    </div>
+    <div class="manifesto-grid card-grid" id="manifesto-grid">
+      {% set manifesto_pillars = [
+        {"title": "Human-Centered Design", "lines": [
+          "Augmentation over Automation: AI must amplify human capability, not usurp control.",
+          "Intuitive Accessibility: Interfaces remain clear, simple, and universally accessible.",
+          "Contextual Respect: Systems honor cultural nuances and human dignity.",
+          "Subservience to Intent: Technology strictly follows human direction and agency."
+        ]},
+        {"title": "Equity & Fairness", "lines": [
+          "Representative Sourcing: Data is curated from diverse, non-exclusionary sources.",
+          "Pre-Deployment Rigor: Models undergo strict bias mitigation before release.",
+          "Discriminatory Prevention: Decision logic is engineered to avoid reinforcing systemic prejudice.",
+          "Community Validation: Impacted demographics participate in the testing lifecycle."
+        ]},
+        {"title": "Transparency & Explainability", "lines": [
+          "Mandatory Disclosure: Users are explicitly informed when interacting with AI.",
+          "Traceability: System behavior is open, audit-ready, and intelligible.",
+          "Data Clarity: Usage policies are transparent; limitations are stated upfront.",
+          "No Black Boxes: We reject opaque logic in critical decision paths."
+        ]},
+        {"title": "Privacy & Data Sovereignty", "lines": [
+          "Strict Minimization: We collect only the data essential for function.",
+          "Fortified Security: Information remains encrypted and protected at rest and in transit.",
+          "Zero-Sale Policy: User data is never monetized or shared externally.",
+          "Right to Erasure: Users retain absolute control to delete their digital footprint."
+        ]},
+        {"title": "Safety & Reliability", "lines": [
+          "Environmental Robustness: Models are stress-tested against real-world volatility.",
+          "Edge-Case Stability: Behavior remains predictable even under extreme inputs.",
+          "Grounded Outputs: Systems prioritize factual consistency over generative creativity.",
+          "Human Oversight: Critical pathways always include human-in-the-loop review."
+        ]},
+        {"title": "Accountability", "lines": [
+          "Creator Liability: We accept full responsibility for our system outputs.",
+          "Public Feedback Loops: Channels for critique and reporting remain open.",
+          "Active Governance: Regular audits ensure compliance is operational, not symbolic.",
+          "Rapid Remediation: Errors are acknowledged and corrected with urgency."
+        ]},
+        {"title": "Open Access & Public Benefit", "lines": [
+          "Knowledge Democratization: Tools and insights are open-sourced whenever feasible.",
+          "Economic Accessibility: Resources remain affordable to prevent digital divides.",
+          "Social Impact: Innovation focuses on shrinking inequality, not widening it.",
+          "Community First: Public benefit takes precedence over proprietary gain."
+        ]},
+        {"title": "Global Ethics & International Respect", "lines": [
+          "Universal Values: Design respects global human rights beyond Western contexts.",
+          "Cross-Cultural Viability: Systems are built for linguistic and cultural inclusivity from day one.",
+          "International Representation: Teams and inputs reflect a global reality."
+        ]}
+      ] %}
+      {% for pillar in manifesto_pillars %}
+        <article class="card card-primary manifesto-card" data-animate="fade-up" data-stagger="{{ loop.index }}">
+          <h3>{{ loop.index }}. {{ pillar.title }}</h3>
+          <ul class="text-muted">
+            {% for line in pillar.lines %}
+              <li>{{ line }}</li>
+            {% endfor %}
+          </ul>
+        </article>
+      {% endfor %}
+    </div>
+    <p class="center-text manifesto-quote" data-animate="fade-up">"We believe AI must serve humanity — especially communities that have been historically underserved."</p>
+  </div>
+</section>
+
+<section id="systems" class="section systems-section page-section secondary-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow-label">Systems</p>
+      <h2 class="section-title">What We Build</h2>
+      <p class="section-subtitle">State-grounded multi-agent systems engineered to operate with clarity, safety constraints, and human-led control. Dasein builds the foundational technologies that link subsumption patterns, shared world models, and transparent decision pathways.</p>
+    </div>
+    <div class="card-grid">
+      {% set systems = [
+        {"title": "SPL – Subsumption Pattern Learning", "status": "In active development", "description": "Three-layer reactive/tactical/deliberative architecture with state-grounded control, reusable pattern library, and cost-aware execution."},
+        {"title": "APL – Agent Protocol Language", "status": "Designing spec", "description": "Communication and suppression protocol enabling coordinated multi-agent work with safety channels and arbitration built-in."},
+        {"title": "State-Grounded Multi-Agent SPL", "status": "Prototype", "description": "Shared world state across agents with budget and safety enforcement, enabling cross-agent pattern reuse and transparent decisions."},
+        {"title": "Future Systems", "status": "Reserved", "description": "Reserved track for upcoming frameworks extending SPL/APL into new domains and partner ecosystems."}
+      ] %}
+      {% for system in systems %}
+        <article class="card card-secondary system-card">
+          <div class="card-header">
+            <h3>{{ system.title }}</h3>
+            <span class="badge" data-status="{{ system.status }}">{{ system.status }}</span>
+          </div>
+          <p class="text-muted">{{ system.description }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section services-section page-section secondary-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow-label">Services</p>
+      <h2 class="section-title">Services (In Progress)</h2>
+      <p class="section-subtitle">Every service we provide is built on Dasein’s commitments: human agency at the center, transparent system behavior, safety and fairness guarantees, and operational clarity across every layer of the stack.</p>
+    </div>
+    <div class="card-grid">
+      {% set services = [
+        {"title": "Ethical AI Architecture Reviews", "status": "Coming Soon", "description": "End-to-end examination of system behavior, fairness risk, privacy boundaries, and human-in-the-loop decision pathways. Designed to prevent harm and align intelligence with real-world human needs.", "placeholder": false},
+        {"title": "Agentic Systems & Subsumption Design", "status": "In Planning", "description": "Blueprinting multi-layer agent systems using safety channels, budget limits, and transparent control flow so human intent remains in command at all times.", "placeholder": false},
+        {"title": "AI Governance, Safety & Policy Advisory", "status": "To Be Announced", "description": "Governance models and operational controls that ensure AI systems stay accountable, auditable, and aligned with policy, community standards, and long-term public benefit.", "placeholder": false},
+        {"title": "Custom Integrations & Engineering", "status": "Future Offering", "description": "Integration of SPL/APL patterns into client systems with verifiable behavior, stable routing logic, and observability from input to outcome.", "placeholder": false},
+        {"title": "Future Service Slot", "status": "Reserved", "description": "Reserved for co-created offerings built in partnership with mission-aligned teams.", "placeholder": true}
+      ] %}
+      {% for service in services %}
+        <article class="card card-secondary service-card {% if service.placeholder %}placeholder{% endif %}">
+          <div class="card-header">
+            <h3>{{ service.title }}</h3>
+            <span class="badge" data-status="{{ service.status }}">{{ service.status }}</span>
+          </div>
+          <p class="text-muted">{{ service.description }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section page-section secondary-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow-label">Projects</p>
+      <h2 class="section-title">Projects &amp; Experiments</h2>
+      <p class="section-subtitle">All prototypes are developed under strict safety, fairness, and human-oversight constraints. These experiments explore how SPL, APL, and multi-agent systems can operate with clarity, responsibility, and transparent reasoning.</p>
+    </div>
+    <div class="card-grid">
+      {% set projects = [
+        {"title": "Email Triage SPL Agent", "status": "Prototype", "description": "Multi-step triage with transparent filters, safety-aware escalation rules, and human-review checkpoints to ensure no autonomous decision is made without oversight."},
+        {"title": "Multi-Agent Document Router", "status": "Design", "description": "Document routing across agents using shared state, visible decision paths, and safety-aware channels that preserve accountability at each step."},
+        {"title": "Project Slot", "status": "Coming Soon", "description": "Reserved for the next co-built deployment, designed with the same commitments to transparency, fairness, and real-world human benefit.", "placeholder": true},
+        {"title": "Reserved", "status": "Coming Soon", "description": "Placeholder for future experiments developed with teams aligned to Dasein’s safety, ethics, and accountability standards.", "placeholder": true}
+      ] %}
+      {% for project in projects %}
+        <article class="card card-secondary project-card {% if project.placeholder %}placeholder{% endif %}">
+          <div class="card-header">
+            <h3>{{ project.title }}</h3>
+            <span class="badge" data-status="{{ project.status }}">{{ project.status }}</span>
+          </div>
+          <p class="text-muted">{{ project.description }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section page-section secondary-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow-label">About</p>
+      <h2 class="section-title">About Dasein</h2>
+      <p class="section-subtitle">Dasein is AI-first and people-first. We build state-grounded multi-agent systems—SPL, APL, and shared-state coordination—guided by global ethics and designed for underserved communities.</p>
+      <p class="section-subtitle">Founded by Pamela Cuce and Shreyas Gowda, Dasein exists to bring ethical, structure-first intelligence into real-world use—designed to serve, not just scale.</p>
+    </div>
+    <div class="card-grid about-grid">
+      <article class="card card-secondary profile-card" data-profile-card data-stagger="1" data-modal-target="founder-modal">
+          <div class="profile-head">
+            <div class="avatar">P</div>
+            <div>
+              <p class="text-muted uppercase">Founder</p>
+              <h3>Pamela Cuce</h3>
+              <p class="text-muted small">AI UX strategist and full-stack builder</p>
+              <p class="text-muted italic">17+ years of deep-stack execution from theory to production.</p>
+            </div>
+          </div>
+          <div class="profile-summary">
+            <p class="text-muted">Pamela’s work spans medical devices, XR environments, cloud platforms, and AI-native systems—each built from scratch with a focus on trust, clarity, and human-centered execution.</p>
+          </div>
+          <div class="profile-overlay">
+            <div class="profile-overlay-header">
+              <div class="avatar large">P</div>
+              <div>
+                <p class="text-muted uppercase">Founder</p>
+                <h3>Pamela Cuce</h3>
+              </div>
+              <button class="link-button overlay-close" type="button">Close</button>
+            </div>
+            <ul class="profile-list">
+              <li>Pamela’s work spans medical devices, XR environments, cloud platforms, and AI-native systems—each built from scratch with a focus on trust, clarity, and human-centered execution.</li>
+              <li>With a background in Embodied Cognitive Science and Human–AI Interaction, her systems mirror how people perceive, adapt, and decide. Instead of wrapping interfaces around AI, she designs intelligence that behaves like a partner—structured, stable, and intuitive.</li>
+              <li>At Dasein, she brings that craft into the next frontier: architecting agentic systems that stay observable, steerable, and aligned with people from day one.</li>
+              <li>Beliefs that drive the work: Human-in-the-loop is structural. Transparency is the foundation. Structure determines trust.</li>
+              <li>NSF Bioengineering Fellow. Developer for NYU Medical College. Instructor in MIT-aligned spaces. Improv-trained with Second City.</li>
+              <li>This work is personal. Dasein exists to prove that intelligent systems can be both powerful and respectful—at the same time.</li>
+            </ul>
+            <div class="button-row wrap">
+              <a class="btn btn-primary sm" href="tosetyet" target="_blank" rel="noreferrer">Explore Work</a>
+              <a class="btn btn-primary sm" href="toset@yet" target="_blank" rel="noreferrer">Contact</a>
+              <a class="btn btn-ghost sm" href="https://www.linkedin.com/in/pamelacuce/" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
+          </div>
+        </article>
+        <article class="card card-secondary profile-card" data-profile-card data-stagger="2" data-modal-target="cofounder-modal">
+          <div class="profile-head">
+            <div class="avatar">S</div>
+            <div>
+              <p class="text-muted uppercase">Co-Founder / Technical Lead</p>
+              <h3>Shreyas Shashi Kumar Gowda</h3>
+              <p class="text-muted small">AI and systems engineer working at the frontier of agentic architectures, temporal RAG, and graph-based retrieval.</p>
+              <p class="text-muted italic">Builds intelligence that acts with structure, not guesswork.</p>
+            </div>
+          </div>
+          <div class="profile-summary">
+            <p class="text-muted">AI systems engineer at the edge of agent architectures, time-aware retrieval, and coordinated reasoning.</p>
+          </div>
+          <div class="profile-overlay">
+            <div class="profile-overlay-header">
+              <div class="avatar large">S</div>
+              <div>
+                <p class="text-muted uppercase">Co-Founder / Technical Lead</p>
+                <h3>Shreyas Shashi Kumar Gowda</h3>
+              </div>
+              <button class="link-button overlay-close" type="button">Close</button>
+            </div>
+            <ul class="profile-list">
+              <li>AI systems engineer at the edge of agent architectures, time-aware retrieval, and coordinated reasoning.</li>
+              <li>Experience spans generative model evaluation and quantitative research—across Outlier AI, WorldQuant, and high-signal prototyping environments.</li>
+              <li>At Dasein, he architects the system backbones: graph-aware reasoning layers, SPL-APL pipelines for state coordination, and chronological grounding for safe, testable flow.</li>
+              <li>The goal: turn complex AI behaviors into reliable, human-readable systems that behave with discipline—not surprise.</li>
+              <li>Why Dasein: “I wanted to build systems that didn’t just chase output, but earned trust—through structure, timing, and accountability.”</li>
+            </ul>
+            <div class="button-row wrap">
+              <a class="btn btn-primary sm" href="https://github.com/SSKG2602" target="_blank" rel="noreferrer">Explore Work</a>
+              <a class="btn btn-primary sm" href="toset@example" target="_blank" rel="noreferrer">Contact</a>
+              <a class="btn btn-ghost sm" href="https://www.linkedin.com/in/shreyasshashi/" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section page-section primary-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow-label">Contact</p>
+      <h2 class="section-title">Contact</h2>
+    </div>
+    <div class="stack">
+      <div class="card card-secondary contact-emails">
+        <div class="email-grid">
+          <div class="email-chip">
+            <span class="badge" data-status="general">General</span>
+            <span class="email-text">{{ contact_emails.general }}</span>
+          </div>
+          <div class="email-chip {% if placeholder_flags.founder %}placeholder{% endif %}">
+            <span class="badge" data-status="founder">Founder</span>
+            <span class="email-text">{{ contact_emails.founder }}</span>
+            {% if placeholder_flags.founder %}<span class="placeholder-note">(to be finalized)</span>{% endif %}
+          </div>
+          <div class="email-chip {% if placeholder_flags.tech %}placeholder{% endif %}">
+            <span class="badge" data-status="tech">Tech</span>
+            <span class="email-text">{{ contact_emails.tech }}</span>
+            {% if placeholder_flags.tech %}<span class="placeholder-note">(to be finalized)</span>{% endif %}
+          </div>
+        </div>
+      </div>
+      <div class="card card-primary contact-card">
+        <div class="form-grid" id="contact-form">
+          <label class="form-field">
+            <span>Name</span>
+            <input type="text" name="name" placeholder="Your name" required>
+          </label>
+          <label class="form-field">
+            <span>Email</span>
+            <input type="email" name="email" placeholder="you@example.com" required>
+          </label>
+          <label class="form-field">
+            <span>Topic</span>
+            <select name="topic">
+              <option value="General">General</option>
+              <option value="Ethics">Ethics</option>
+              <option value="Systems">Systems</option>
+              <option value="Services">Services</option>
+              <option value="Partnership">Partnership</option>
+            </select>
+          </label>
+          <label class="form-field full">
+            <span>Message</span>
+            <textarea name="message" rows="5" placeholder="How can we help?" required></textarea>
+          </label>
+          <button class="btn btn-primary" type="button" id="contact-submit">Send message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block footer %}
+<footer id="footer" class="footer">
+  <div class="container footer-content">
+    <div class="footer-column" data-animate="fade-up">
+      <h3 class="brand">Dasein</h3>
+      <p class="text-muted">Built for global ethics and underserved communities first. The first AI-first company where people are actually first.</p>
+      <div class="footer-links">
+        <button class="link-button" data-scroll-target="hero">Back to top</button>
+        <button class="link-button" data-scroll-target="values">Manifesto</button>
+        <button class="link-button" data-scroll-target="contact">Contact</button>
+      </div>
+    </div>
+    <div class="footer-column" data-animate="fade-up">
+      <div class="stack">
+        <h4>Join the waitlist</h4>
+        <p class="text-muted">Get updates on ethical multi-agent systems, SPL/APL, and new offerings.</p>
+        <div class="footer-form" id="subscribe-form">
+          <input type="email" name="email" placeholder="you@example.com" aria-label="Email">
+          <button class="btn btn-primary" type="button" id="subscribe-submit">Notify me</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="modal" id="founder-modal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="modal-overlay" data-close-modal></div>
+  <div class="modal-content card">
+    <div class="modal-header">
+      <div class="avatar">P</div>
+      <div>
+        <p class="text-muted uppercase">Founder</p>
+        <h3>Pamela Cuce</h3>
+        <p class="text-muted">AI UX strategist and full-stack builder</p>
+      </div>
+      <button class="link-button" type="button" data-close-modal>Close</button>
+    </div>
+    <div class="modal-body">
+      <p class="text-strong">17+ years of deep-stack execution from theory to production.</p>
+      <ul class="profile-list">
+        <li>Pamela’s work spans medical devices, XR environments, cloud platforms, and AI-native systems—each built from scratch with a focus on trust, clarity, and human-centered execution.</li>
+        <li>With a background in Embodied Cognitive Science and Human–AI Interaction, her systems mirror how people perceive, adapt, and decide. Instead of wrapping interfaces around AI, she designs intelligence that behaves like a partner—structured, stable, and intuitive.</li>
+        <li>At Dasein, she brings that craft into the next frontier: architecting agentic systems that stay observable, steerable, and aligned with people from day one.</li>
+        <li>Beliefs that drive the work: Human-in-the-loop is structural. Transparency is the foundation. Structure determines trust.</li>
+        <li>NSF Bioengineering Fellow. Developer for NYU Medical College. Instructor in MIT-aligned spaces. Improv-trained with Second City.</li>
+        <li>This work is personal. Dasein exists to prove that intelligent systems can be both powerful and respectful—at the same time.</li>
+      </ul>
+    </div>
+    <div class="modal-footer button-row wrap">
+      <a class="btn btn-primary sm" href="tosetyet" target="_blank" rel="noreferrer">Explore Work</a>
+      <a class="btn btn-primary sm" href="toset@yet" target="_blank" rel="noreferrer">Contact</a>
+      <a class="btn btn-ghost sm" href="https://www.linkedin.com/in/pamelacuce/" target="_blank" rel="noreferrer">LinkedIn</a>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="cofounder-modal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="modal-overlay" data-close-modal></div>
+  <div class="modal-content card">
+    <div class="modal-header">
+      <div class="avatar">S</div>
+      <div>
+        <p class="text-muted uppercase">Co-Founder / Technical Lead</p>
+        <h3>Shreyas Shashi Kumar Gowda</h3>
+      </div>
+      <button class="link-button" type="button" data-close-modal>Close</button>
+    </div>
+    <div class="modal-body">
+      <p class="text-strong">Builds intelligence that acts with structure, not guesswork.</p>
+      <p class="text-muted">Works at the frontier of retrieval-augmented generation, graph-based memory, and multi-agent system design. Experience spans generative model evaluation and quantitative research—across Outlier AI, WorldQuant, and high-signal prototyping environments.</p>
+      <p class="text-muted">At Dasein, architects the system backbones: graph-aware reasoning layers, SPL-APL pipelines for state coordination, and chronological grounding for safe, testable flow. Goal: turn complex AI behaviors into reliable, human-readable systems that behave with discipline—not surprise.</p>
+      <p class="text-muted italic">“I wanted to build systems that didn’t just chase output, but earned trust—through structure, timing, and accountability.”</p>
+      <a class="link-button" href="https://www.linkedin.com/in/shreyasshashi/" target="_blank" rel="noreferrer">LinkedIn</a>
+    </div>
+    <div class="modal-footer button-row wrap">
+      <a class="btn btn-primary sm" href="https://github.com/SSKG2602" target="_blank" rel="noreferrer">Explore Work</a>
+      <a class="btn btn-primary sm" href="toset@example" target="_blank" rel="noreferrer">Contact</a>
+      <button class="btn btn-ghost sm" type="button" data-close-modal>Close</button>
+    </div>
+  </div>
+</div>
+{% endblock %}

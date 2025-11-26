@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dasein | AI-first, People-first</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body id="app-body" class="theme-dark">
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="brand">Dasein</div>
+      <nav class="nav-links">
+        <a href="#values" data-scroll-target="values">Values</a>
+        <a href="#why" data-scroll-target="why">Our Manifesto</a>
+        <a href="#systems" data-scroll-target="systems">Systems</a>
+        <a href="#services" data-scroll-target="services">Services</a>
+        <a href="#projects" data-scroll-target="projects">Projects</a>
+        <a href="#about" data-scroll-target="about">About</a>
+        <a href="#contact" data-scroll-target="contact">Contact</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <span class="toggle-knob"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    {% block content %}{% endblock %}
+  </main>
+
+  {% block footer %}{% endblock %}
+
+  <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+  <script defer src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
